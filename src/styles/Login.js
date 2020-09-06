@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const StyledLogin = styled.div`
   display: grid;
@@ -12,7 +11,7 @@ export const StyledLogin = styled.div`
   }
 `;
 
-export const StyledButton = styled(Link)`
+export const StyledButton = styled.a`
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -21,4 +20,13 @@ export const StyledButton = styled(Link)`
   border-radius: 10rem;
   font-weight: 800;
   color: #fff;
+  transition: all 200ms;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
 `;

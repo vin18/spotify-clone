@@ -1,4 +1,5 @@
 import React from 'react';
+import { loginUrl } from '../api/spotifyApi';
 import { StyledLogin, StyledButton } from '../styles/Login';
 
 const Login = () => {
@@ -8,7 +9,7 @@ const Login = () => {
         src='https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png'
         alt='Spotify logo'
       />
-      <StyledButton to='/'>Login with Spotify</StyledButton>
+      <StyledButton href={loginUrl}>Login with Spotify</StyledButton>
     </StyledLogin>
   );
 };

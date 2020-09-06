@@ -16,7 +16,6 @@ export const Global = createGlobalStyle`
     font-size: 1.6rem;
     font-family: Open-Sans, sans-serif;
     line-height: 1.6;
-    color: red;
     min-height: 100vh;
   }
 `;
