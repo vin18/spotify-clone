@@ -17,5 +17,6 @@ export const Global = createGlobalStyle`
     font-family: Open-Sans, sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-  }
+    letter-spacing: .05rem;
+  } 
 `;

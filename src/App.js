@@ -8,7 +8,7 @@ import { Global } from './styles/Global';
 
 const App = () => {
   const spotifyContext = useContext(SpotifyContext);
-  const { token, setToken, setUser } = spotifyContext;
+  const { token, setToken, setUser, setPlaylists } = spotifyContext;
 
   useEffect(() => {
     async function fetchApi() {
@@ -17,8 +17,10 @@ const App = () => {
 
       const _token = hash.access_token;
       if (_token) {
+        console.log(_token);
         setToken(_token);
         setUser();
+        setPlaylists();
       }
     }
     fetchApi();

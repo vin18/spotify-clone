@@ -3,19 +3,17 @@ import SpotifyWebApi from 'spotify-web-api-js';
 
 import SpotifyContext from './spotifyContext';
 import SpotifyReducer from './spotifyReducer';
-import { SET_USER, SET_TOKEN } from './types';
+import { SET_USER, SET_TOKEN, SET_PLAYLISTS } from './types';
 
 const spotify = new SpotifyWebApi();
 
 const SpotifyState = (props) => {
   const initialState = {
     user: '',
-    playlist: [],
+    playlists: [],
     playing: false,
     item: null,
-    token:
-      'BQCAIcNmE3vBU5lUALDUFU-daYzttFQQ1Qqb28eHID66KH2GwTMQ6jZsI7Bn9EBbnMQj-RhqRTNxCG0iBrzB3fVEgB7AwqQtaja7Z3PnCqQRBLqFaM484zryu4m5SyLzKUidV7pAsKglq9eoypNM2zue-7a73SMw6k5GwpzwQMjokgrw',
-    // token: null,
+    token: null,
   };
 
   const [state, dispatch] = useReducer(SpotifyReducer, initialState);
@@ -35,13 +33,21 @@ const SpotifyState = (props) => {
     dispatch({ type: SET_USER, payload: user });
   };
 
+  // Get Playlists
+  const setPlaylists = async () => {
+    const _playlists = await spotify.getUserPlaylists();
+    dispatch({ type: SET_PLAYLISTS, payload: _playlists });
+  };
+
   return (
     <SpotifyContext.Provider
       value={{
         token: state.token,
         user: state.user,
+        playlists: state.playlists,
         setToken,
         setUser,
+        setPlaylists,
       }}
     >
       {props.children}

@@ -1,4 +1,4 @@
-import { SET_USER, SET_TOKEN } from './types';
+import { SET_USER, SET_TOKEN, SET_PLAYLISTS } from './types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -12,6 +12,12 @@ export default (state, action) => {
       return {
         ...state,
         token: action.payload,
+      };
+
+    case SET_PLAYLISTS:
+      return {
+        ...state,
+        playlists: action.payload,
       };
 
     default:
