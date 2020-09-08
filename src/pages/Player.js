@@ -1,14 +1,17 @@
-import React, { useContext } from 'react';
-import SpotifyContext from '../context/spotifyContext';
+import React from 'react';
+import Sidebar from '../components/Sidebar';
+import Body from '../components/Body';
+import Footer from '../components/Footer';
+import { StyledPlayerBody } from '../styles/Player';
 
-const Player = () => {
-  const spotifyContext = useContext(SpotifyContext);
-  const { user } = spotifyContext;
-
+const Player = ({ spotify }) => {
   return (
-    <div>
-      <h1>Player</h1>
-      <h1>{user.display_name}</h1>
+    <div className='plater'>
+      <StyledPlayerBody>
+        <Sidebar />
+        <Body />
+      </StyledPlayerBody>
+      <Footer />
     </div>
   );
 };

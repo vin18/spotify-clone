@@ -13,7 +13,9 @@ const SpotifyState = (props) => {
     playlist: [],
     playing: false,
     item: null,
-    token: null,
+    token:
+      'BQCAIcNmE3vBU5lUALDUFU-daYzttFQQ1Qqb28eHID66KH2GwTMQ6jZsI7Bn9EBbnMQj-RhqRTNxCG0iBrzB3fVEgB7AwqQtaja7Z3PnCqQRBLqFaM484zryu4m5SyLzKUidV7pAsKglq9eoypNM2zue-7a73SMw6k5GwpzwQMjokgrw',
+    // token: null,
   };
 
   const [state, dispatch] = useReducer(SpotifyReducer, initialState);
@@ -24,6 +26,7 @@ const SpotifyState = (props) => {
       type: SET_TOKEN,
       payload: token,
     });
+    spotify.setAccessToken(token);
   };
 
   // Set User
