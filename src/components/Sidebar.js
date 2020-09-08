@@ -27,8 +27,8 @@ const Sidebar = () => {
       <StyledTitle>PLAYLISTS</StyledTitle>
       <hr />
 
-      {playlists?.items?.map((playlist) => (
-        <SidebarOption title={playlist.name} />
+      {playlists?.items?.map((playlist, index) => (
+        <SidebarOption key={index} title={playlist.name} />
       ))}
     </StyledSidebar>
   );

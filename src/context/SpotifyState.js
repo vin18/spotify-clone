@@ -13,9 +13,9 @@ const SpotifyState = (props) => {
     playlists: [],
     playing: false,
     item: null,
-    token:
-      'BQCm7MUBbh-4Fx3q82iQw5p4Z2FWbs27RCMmTnnGRXZBXLVyHgklr-g9isp5NZ1oS6Y5YffGbRrz-QYyeoUYS6THHSKAVSRNBgOc_5XvZexT3ZOZr4ZgAjyrkzJ4jQkSboMYbTK1Gou72f1Dt1VHyFterS1LWaLcQNzDMCugM-h1RWAW',
-    // token: null,
+    // token:
+    //   'BQCm7MUBbh-4Fx3q82iQw5p4Z2FWbs27RCMmTnnGRXZBXLVyHgklr-g9isp5NZ1oS6Y5YffGbRrz-QYyeoUYS6THHSKAVSRNBgOc_5XvZexT3ZOZr4ZgAjyrkzJ4jQkSboMYbTK1Gou72f1Dt1VHyFterS1LWaLcQNzDMCugM-h1RWAW',
+    token: null,
   };
 
   const [state, dispatch] = useReducer(SpotifyReducer, initialState);

@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyledBody } from '../styles/Body';
+import Header from './Header';
 
-const Body = () => {
+const Body = ({ spotify }) => {
   return (
     <StyledBody>
-      <h1>Body</h1>
+      <Header spotify={spotify} />
     </StyledBody>
   );
 };

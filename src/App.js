@@ -11,13 +11,12 @@ const App = () => {
   const { token, setToken, setUser, setPlaylists } = spotifyContext;
 
   useEffect(() => {
-    async function fetchApi() {
+    function fetchApi() {
       const hash = getTokenFromUrl();
       window.location.hash = '';
 
       const _token = hash.access_token;
       if (_token) {
-        console.log(_token);
         setToken(_token);
         setUser();
         setPlaylists();
