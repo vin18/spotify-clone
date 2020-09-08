@@ -30,9 +30,6 @@ const Sidebar = () => {
       {playlists?.items?.map((playlist) => (
         <SidebarOption title={playlist.name} />
       ))}
-      {/* <SidebarOption title='Hip hop' />
-      <SidebarOption title='Rock' />
-      <SidebarOption title='RnB' /> */}
     </StyledSidebar>
   );
 };

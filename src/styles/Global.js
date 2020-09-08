@@ -19,4 +19,8 @@ export const Global = createGlobalStyle`
     min-height: 100vh;
     letter-spacing: .05rem;
   } 
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
 `;

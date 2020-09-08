@@ -11,7 +11,8 @@ export const StyledSidebarOption = styled.div`
   margin-bottom: 0.5rem;
   margin-left: 1rem;
 
-  &:hover {
+  &:hover,
+  .MuiSvgIcon-root.icon:hover {
     color: #fff;
   }
 
@@ -20,12 +21,12 @@ export const StyledSidebarOption = styled.div`
     margin-left: 1rem;
     font-size: 1.8rem;
   }
-`;
 
-export const StyledIcon = {
-  color: 'grey',
-  fontSize: '5rem',
-  paddingLeft: '1rem',
-  paddingRight: '1rem',
-  marginRight: '1rem',
-};
+  .MuiSvgIcon-root.icon {
+    color: grey;
+    font-size: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+`;
