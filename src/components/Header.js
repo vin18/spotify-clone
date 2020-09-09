@@ -23,7 +23,6 @@ const Header = () => {
       </StyledHeaderLeft>
 
       <StyledHeaderRight>
-        {/* <Avatar src={user?.images[0]?.url} alt={user?.display_name} /> */}
         <Avatar
           src='https://avatars1.githubusercontent.com/u/31928236?s=60&v=4'
           alt={user?.display_name}

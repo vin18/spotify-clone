@@ -81,4 +81,5 @@ export const StyledFooterRight = styled.div`
 
   .MuiSvgIcon-root {
     font-size: 2.75rem;
- `;
+  }
+`;

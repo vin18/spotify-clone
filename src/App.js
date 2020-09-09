@@ -8,7 +8,13 @@ import { Global } from './styles/Global';
 
 const App = () => {
   const spotifyContext = useContext(SpotifyContext);
-  const { token, setToken, setUser, setPlaylists } = spotifyContext;
+  const {
+    token,
+    setToken,
+    setUser,
+    setPlaylists,
+    setDiscoverWeekly,
+  } = spotifyContext;
 
   useEffect(() => {
     function fetchApi() {
@@ -20,6 +26,7 @@ const App = () => {
         setToken(_token);
         setUser();
         setPlaylists();
+        setDiscoverWeekly();
       }
     }
     fetchApi();

@@ -29,6 +29,10 @@ export const StyledHeaderLeft = styled.div`
       font-size: 1.4rem;
       font-weight: inherit;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 `;
 

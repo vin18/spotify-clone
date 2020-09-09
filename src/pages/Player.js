@@ -4,7 +4,7 @@ import Body from '../components/Body';
 import Footer from '../components/Footer';
 import { StyledPlayerBody } from '../styles/Player';
 
-const Player = ({ spotify }) => {
+const Player = () => {
   return (
     <div className='plater'>
       <StyledPlayerBody>
